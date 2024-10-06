@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Icon -->
+    <link rel="icon" href="calc_icon.jpg" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="calc_style.css" />
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="text-bar-container">
+        <form>
+          <input
+            type="text"
+            class="text-bar"
+            placeholder="0"
+            id="text"
+            readonly
+          />
+        </form>
+      </div>
+
+      <div class="button-grid">
+        <button class="calc_button clear_button" onclick="allClear()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="45px"
+            height="45px"
+            fill="#ff0000"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z"
+            />
+          </svg>
+        </button>
+        <button   class="calc_button clear_button" onclick="deletefunc()">
+                <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="45px"
+            viewBox="0 -960 960 960"
+            width="45px"
+            fill="#ff0000"
+          >
+            <path
+              d="M360-200q-20 0-37.5-9T294-234L153-434q-15-21-15-46t15-46l141-200q11-16 28.5-25t37.5-9h400q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H360Zm400-80v-400 400Zm-400 0h400v-400H360L218-480l142 200Zm200-144 76 76q11 11 28 11t28-11q11-11 11-28t-11-28l-76-76 76-76q11-11 11-28t-11-28q-11-11-28-11t-28 11l-76 76-76-76q-11-11-28-11t-28 11q-11 11-11 28t11 28l76 76-76 76q-11 11-11 28t11 28q11 11 28 11t28-11l76-76Z"
+            />
+          </svg>
+        </button>
+        <button class="calc_button" onclick="addOperator('%')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="45px"
+            viewBox="0 -960 960 960"
+            width="45px"
+            fill="#00E2FF"
+          >
+            <path
+              d="M285.82-526q-62.45 0-104.63-42.56Q139-611.11 139-673.43q0-62.33 42.53-104.95Q224.06-821 286.29-821q61.82 0 104.76 42.34Q434-736.32 434-674.27q0 62.53-42.87 105.4Q348.26-526 285.82-526Zm-.44-92q22.24 0 39.43-16.21Q342-650.41 342-673.97t-16.79-39.79Q308.43-730 286.59-730q-24.67 0-40.13 15.96T231-673.94q0 23.06 15.24 39.5T285.38-618Zm388.21 479q-62.03 0-104.81-42.26T526-285.67q0-62.15 42.67-105.24Q611.34-434 674.17-434t105.33 43.28q42.5 43.28 42.5 104.5T778.81-182q-43.2 43-105.22 43Zm.38-91q23.56 0 39.79-15.98Q730-261.95 730-285.56q0-21.94-15.96-38.69Q698.08-341 673.94-341q-23.06 0-39.5 16.58T618-286.29q0 24.37 16.21 40.33Q650.41-230 673.97-230ZM171-171q-14-13.33-14-31.67Q157-221 171-235l556-555q14.33-14 32.17-14Q777-804 790-789.27q14 13.73 14 30.98T790-727L235-171q-13.53 14-32.24 14-18.72 0-31.76-14Z"
+            />
+          </svg>
+        </button>
+        <button class="calc_button" onclick="addOperator('/')">
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            height="45px"
+            width="45px"
+          >
+            <circle cx="32" cy="16" r="4" fill="#00E2FF" />
+            <circle cx="32" cy="48" r="4" fill="#00E2FF" />
+            <rect x="12" y="28" width="40" height="6" rx="4" fill="#00E2FF" />
+          </svg>
+        </button>
+
+        <button class="calc_button" onclick="addnumber('7')">7</button>
+        <button class="calc_button" onclick="addnumber('8')">8</button>
+        <button class="calc_button" onclick="addnumber('9')">9</button>
+        <button class="calc_button" onclick="addOperator('*')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            viewBox="0 -960 960 960"
+            width="40px"
+            fill="#00E2FF"
+          >
+            <path
+              d="M480-414 282-216q-14 14-33 14t-33-14q-14-14-14-33t14-33l198-198-198-198q-14-14-14-33t14-33q14-14 33-14t33 14l198 198 198-198q14-14 33-14t33 14q14 14 14 33t-14 33L546-480l198 198q14 14 14 33t-14 33q-14 14-33 14t-33-14L480-414Z"
+            />
+          </svg>
+        </button>
+
+        <button class="calc_button" onclick="addnumber('4')">4</button>
+        <button class="calc_button" onclick="addnumber('5')">5</button>
+        <button class="calc_button" onclick="addnumber('6')">6</button>
+        <button class="calc_button" onclick="addOperator('-')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="40x"
+            width="35px"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#00E2FF"
+              d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </button>
+
+        <button class="calc_button" onclick="addnumber('1')">1</button>
+        <button class="calc_button" onclick="addnumber('2')">2</button>
+        <button class="calc_button" onclick="addnumber('3')">3</button>
+        <button class="calc_button" onclick="addOperator('+')">
+          <svg
+            
+            xmlns="http://www.w3.org/2000/svg"
+            height="40"
+            width="35"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#00E2FF"
+              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+            />
+          </svg>
+        </button>
+
+        <button class="calc_button" onclick="addOperator('.')">.</button>
+        <button class="calc_button zero_button" onclick="addnumber('0')">
+          0
+        </button>
+        <button class="calc_button equality_sign_in" onclick="calculate()">
+          <svg
+            
+            xmlns="http://www.w3.org/2000/svg"
+            height="40px"
+            width="40px"
+            
+            viewBox="0 -960 960 960"
+            width="60px"
+            fill="#ffcc00"
+          >
+            <path
+              d="M220-280q-25 0-42.5-17.5T160-340q0-25 17.5-42.5T220-400h520q25 0 42.5 17.5T800-340q0 25-17.5 42.5T740-280H220Zm0-280q-25 0-42.5-17.5T160-620q0-25 17.5-42.5T220-680h520q25 0 42.5 17.5T800-620q0 25-17.5 42.5T740-560H220Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Optional Sign Up/Login Buttons -->
+    <div class="container_2">
+      <button class="sign_up_btn">Sign Up</button>
+      <button class="log_in_btn">Login</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

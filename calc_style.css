@@ -1,0 +1,160 @@
+/* General Reset */
+body {
+  background-color: #000000;
+  background-image: url("edit 3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000000;
+  display: flex;
+  font-family: "Share Tech Mono", monospace;
+  justify-content: center;
+  align-items: center; /* Center the calculator vertically */
+  min-height: 100vh; /* Full screen height */
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid #00ff74;
+  box-shadow: 1px 1px 20px 2px rgba(0, 255, 0, 0.685);
+  transition: 0.3s ease-in-out;
+}
+
+.text-bar-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-bar {
+  width: 95%;
+  font-family: monospace;
+  font-size: 4rem;
+  text-align: right;
+  padding: 10px;
+  background-color: #00000045;
+  color: #00ddff;
+  border: 2px solid #00ff74;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.text-bar:focus {
+  box-shadow: 0 0 30px 4px rgb(0, 255, 234);
+  border: 2px solid #00ff74;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.calc_button {
+  font-family:  monospace;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid #00ff74;
+  border-radius: 10px;
+  color: #00e2ff;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 4px rgb(0, 255, 229);
+  transform: translate(2px, 3px) scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.calc_button:hover {
+  box-shadow:0px 0px 20px 4px rgb(0, 255, 26);
+  transform: translate(2px, 3px) scale(1.09);
+  transition: transform 0.2s ease-in-out;
+}
+
+.clear_button:hover {
+  box-shadow:0px 0px 20px 4px rgb(255, 0, 0);
+  transform: translate(2px, 3px) scale(1.09);
+  transition: transform 0.2s ease-in-out;
+}
+
+.zero_button {
+  grid-column: span 1;
+}
+.equality_sign_in {
+  grid-column: span 2;
+}
+.equality_sign_in:hover {
+  box-shadow:0px 0px 20px 3px#ffcc00;
+  transform: translate(2px, 3px) scale(1.09);
+  transition: transform 0.2s ease-in-out;
+
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .text-bar {
+    font-size: 3.5rem;
+  }
+  .calculator {
+    position: relative;
+    top: 30px;
+  }
+  .calc_button {
+    padding-block: 5px;
+    padding-inline: 1px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-bar {
+    font-size: 4rem;
+    width: 97%;
+    padding: 5px;
+  }
+  .calculator {
+    position: relative;
+    top: 30px;
+  }
+  .calc_button {
+    padding-block: 5px;
+    padding-inline: 1px;
+    font-size: 3rem;
+  }
+}
+
+/* Optional Sign Up/Login */
+.container_2 {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: flex;
+}
+
+.sign_up_btn,
+.log_in_btn {
+  padding: 10px;
+  background-color: #00000045;
+  color: #ffffff;
+  border: 2px solid #00ff74;
+  border-radius: 10px;
+
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sign_up_btn:hover,
+.log_in_btn:hover {
+  box-shadow: 0 0 10px #00ff74;
+}
