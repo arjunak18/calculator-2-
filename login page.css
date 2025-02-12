@@ -1,0 +1,103 @@
+body {
+  width: 100%;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-image: url("StockCake-Cybersecurity Digital Lock_1728584736.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  transition: cyan 0.7s ease-in-out;
+  transition-property: all;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+.container {
+  border: 3px solid rgb(255, 183, 0);
+  padding: 100px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+.username_bar,
+.password_bar {
+  border: transparent;
+  border-bottom: 3px solid rgb(255, 183, 0);
+  color: rgb(0, 242, 255);
+  padding-block: 10px;
+  border-radius: 50px;
+  font-size:20px;
+  background: transparent;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 200px;
+}
+.username_bar::placeholder,
+.password_bar::placeholder {
+  color: rgb(0, 221, 255);
+  font-size: 20px;
+}
+.username_bar:focus,
+.password_bar:focus{
+ outline:none;
+}
+
+.submit_button {
+  padding-inline: 50px;
+  padding-block: 10px;
+  border-radius: 30px;
+}
+.password-container {
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: blue;
+}
+.password-container {
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+}
+
+.toggle-password i {
+  font-size: 18px;
+}
